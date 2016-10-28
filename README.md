@@ -15,7 +15,7 @@ Older versions produce errors.
 
 Clone this repo into new project folder (e.g., `my-proj`).
 ```bash
-git clone  https://github.com/M2JS/1.angular-protractor-ts-quickstart  my-proj
+git clone  https://github.com/M2JS/1.angular2-protractor-jasmine-ts-seed.git  my-proj
 cd my-proj
 ```
 
