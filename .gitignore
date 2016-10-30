@@ -13,6 +13,6 @@ _test-output
 _temp
 
 !karma*.js
-!protractor*.js
+!reporter.js
 !systemjs.config.js
 !wallaby.js

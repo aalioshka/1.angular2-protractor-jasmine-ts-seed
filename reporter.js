@@ -3,46 +3,8 @@ var path = require('canonical-path');
 var _ = require('lodash');
 
 
-exports.config = {
-  directConnect: true,
-
-  // Capabilities to be passed to the webdriver instance.
-  capabilities: {
-    'browserName': 'chrome'
-  },
-
-  // Framework to use. Jasmine is recommended.
-  framework: 'jasmine',
-
-  // Spec patterns are relative to this config file
-  specs: ['e2e/specs/**/*spec.js' ],
-
-
-  // For angular tests
-  useAllAngular2AppRoots: true,
-
-  // Base URL for application server
-  baseUrl: 'http://localhost:8080',
-
-  onPrepare: function() {
-    jasmine.getEnv().addReporter(new Reporter( browser.params )) ;
-
-    // Allow changing bootstrap mode to NG1 for upgrade tests
-    global.setProtractorToNg1Mode = function() {
-      browser.useAllAngular2AppRoots = false;
-      browser.rootEl = 'body';
-    };
-  },
-
-  jasmineNodeOpts: {
-    defaultTimeoutInterval: 10000,
-    showTiming: true,
-    print: function() {}
-  }
-};
-
 // Custom reporter
-function Reporter(options) {
+var Reporter = function(options) {
   var _defaultOutputFile = path.resolve(process.cwd(), './_test-output', 'protractor-results.txt');
   options.outputFile = options.outputFile || _defaultOutputFile;
 
@@ -153,5 +115,6 @@ function Reporter(options) {
       _pad = _pad + '  ';
     }
   }
+};
 
-}
+module.exports = Reporter;
