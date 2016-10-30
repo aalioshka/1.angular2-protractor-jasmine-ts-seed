@@ -24,7 +24,7 @@ exports.config = {
   onPrepare: function() {
     let globals = require('protractor');
     let browser: ProtractorBrowser = globals.browser;
-    let Reporter = require('./reporter');
+    let Reporter = require('weird-reporter');
     jasmine.getEnv().addReporter(new Reporter( browser.params ));
   },
 

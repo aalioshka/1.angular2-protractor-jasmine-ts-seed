@@ -13,6 +13,5 @@ _test-output
 _temp
 
 !karma*.js
-!reporter.js
 !systemjs.config.js
 !wallaby.js

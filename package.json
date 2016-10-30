@@ -45,6 +45,8 @@
     "webdriver-manager": "10.2.5",
     "rimraf": "^2.5.4",
 
+    "weird-reporter": "git://github.com/M2JS/weird-reporter.git",
+
     "@types/core-js": "^0.9.34",
     "@types/node": "^6.0.45",
     "@types/jasmine": "^2.5.35",
