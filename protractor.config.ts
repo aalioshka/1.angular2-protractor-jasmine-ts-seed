@@ -25,12 +25,11 @@ exports.config = {
     let globals = require('protractor');
     let browser: ProtractorBrowser = globals.browser;
     let Reporter = require('./reporter');
-    jasmine.getEnv().addReporter(new Reporter( browser.params )) ;
+    jasmine.getEnv().addReporter(new Reporter( browser.params ));
   },
 
   jasmineNodeOpts: {
     defaultTimeoutInterval: 10000,
-    showTiming: true,
-    print: function() {}
+    showTiming: true
   }
 };
