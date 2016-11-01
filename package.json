@@ -11,7 +11,13 @@
     "tsc:w": "tsc -w",
     "webdriver:update": "webdriver-manager update"
   },
-  "keywords": [],
+  "keywords": [
+    "Protractor",
+    "Jasmine",
+    "TypeScript",
+    "Angular 2",
+    "Seed"
+  ],
   "author": "M2JS",
   "dependencies": {
     "@angular/common": "~2.1.1",
